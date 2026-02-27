@@ -49,10 +49,10 @@ a:hover {
 }
 
 /* Disabled button styles */
-a[disabled] {
-    pointer-events: none;
+.badge-disabled {
     opacity: 0.5;
-    cursor: not-allowed; /* Change the cursor to indicate it is not clickable */
+    pointer-events: none;
+    cursor: not-allowed;
 }
 
 .button--download {
@@ -81,16 +81,8 @@ a[disabled] {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.linux-github-download-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none; /* ensure no underline on label */
-}
-
-.linux-github-download-wrapper .badge-label {
-    margin-bottom: 4px;
-    font-size: 14px;
+.badge-label {
+    font-size: var(--font-xs);
     color: #000;
     text-align: center;
     line-height: 1.2;
@@ -206,16 +198,16 @@ html[dir=rtl] .app__logo-wrapper {
 
 .app__screenshot {
     width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 12px 48px rgba(17, 16, 62, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.6);
     transition: all 0.3s ease-in-out;
     transform: scale(1);
     cursor: pointer;
 }
 
 .app__screenshot:hover {
-    box-shadow: 0 24px 48px rgba(17, 16, 62, 0.12);
-    transform: scale(1.05);
+   box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.75);
+   transform: scale(1.05);
 }
 
 .app__screenshots-wrapper {
@@ -223,10 +215,10 @@ html[dir=rtl] .app__logo-wrapper {
 }
 
 .app__buttons {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping when necessary */
-    justify-content: space-between; /* Evenly distribute space between buttons */
-    gap: 10px; /* Adds space between buttons */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: start;
 }
 
 .app__buttons--mobile {
@@ -250,12 +242,12 @@ html[dir=rtl] .app__logo-wrapper {
 }
 
 .app__button-badge {
-    flex: 1 1 30%; /* Buttons will take 30% of the width but can shrink and grow */
-    min-width: 120px; /* Prevent buttons from becoming too small */
+    flex: 1 1 30%;
+    min-width: 120px;
     display: flex;
-    text-align: center;
-    justify-content: center; /* Center-align the content inside the button */
-    align-items: center; /* Align the content vertically */
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
 .app__button-badge img {
