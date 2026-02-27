@@ -48,13 +48,6 @@ a:hover {
     color: #5A51FE;
 }
 
-/* Disable styles for certain links */
-a.no-style {
-}
-
-a.no-style:hover {
-}
-
 /* Disabled button styles */
 a[disabled] {
     pointer-events: none;
@@ -102,8 +95,6 @@ a[disabled] {
     text-align: center;
     line-height: 1.2;
 }
-
-
 
 .accent {
     color: #5A51FE;
@@ -268,16 +259,15 @@ html[dir=rtl] .app__logo-wrapper {
 }
 
 .app__button-badge img {
-    width: 100%; /* Make the image fill the button container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
-.app__button-web {
-    margin-left: 12px;
-}
-
-.app__button-web img {
-    width: 157px;
+/* Placeholder text for upcoming download options */
+.badge-placeholder {
+    font-size: var(--font-xxs);
+    color: #999;
+    text-align: center;
 }
 
 .app__section-title {
@@ -292,6 +282,12 @@ html[dir=rtl] .app__logo-wrapper {
     .app__section {
         margin-bottom: 64px;
     }
+}
+
+/* Feature list on index page */
+.app__features {
+    padding-left: 20px;
+    line-height: 2;
 }
 
 .app__featured-content {
